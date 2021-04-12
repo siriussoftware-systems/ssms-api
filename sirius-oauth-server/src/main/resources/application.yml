@@ -1,0 +1,65 @@
+server:
+  port: ${PORT:0}
+  servlet:
+    context-path: /oauth
+    
+spring:
+  application:
+    name: sirius-oauth-server
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    hostname: localhost
+    port: 8761
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+#  server:
+#    wait-time-in-ms-when-sync-empty: 3000
+
+security:
+  oauth2:
+    client:
+      access-token-validity-seconds: 2000
+      authorized-grant-types: password,refresh_token
+      client-id: coderef
+      client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
+      resource-ids: resources
+      scope: read,write
+    
+
+# zuul timeout 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon: 
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
+
+# swagger
+springfox:
+  documentation:
+    auto-startup: true
+
+logging:
+  level:
+    org.springframework.security: INFO
+    
+oauth:
+  client:
+    name: Service
+    secret: teste
+    
+jwt:
+  secret: teste

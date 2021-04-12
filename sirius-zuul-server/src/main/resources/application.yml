@@ -1,0 +1,65 @@
+server:
+  port: 8000
+       
+spring:
+  application:
+    name: sirius-zuul-server
+#  cloud:
+#    config:
+#      uri: http://localhost:8761
+        
+eureka:
+  instance:
+    hostname: localhost
+    port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      
+zuul:
+  prefix: /api
+  ignored-services: "*"
+  
+  routes:
+    sirius-suporte-admin:
+      path: /suporte/**
+      service-id: sirius-suporte-admin
+      strip-prefix: false
+      custom-sensitive-headers: true
+    sirius-notification:
+      path: /notification/**
+      service-id: sirius-notification
+      strip-prefix: false
+      custom-sensitive-headers: true
+    sirius-authentication-server:
+      path: /authentication/**
+      service-id: sirius-authentication-server
+      strip-prefix: false
+      custom-sensitive-headers: true
+    sirius-oauth-server:
+      path: /oauth/**
+      service-id: sirius-oauth-server
+      strip-prefix: false
+      custom-sensitive-headers: true
+      sensitive-headers: Cookie, Set-Cookie
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon: 
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
+  
+jwt:
+  secret: teste

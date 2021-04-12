@@ -1,0 +1,76 @@
+server:
+  port: ${PORT:0}
+  servlet:
+    context-path: /notificacao
+
+spring:
+  application:
+    name: sirius-notificacao
+#  cloud:
+#    config:
+#      uri: http://localhost:8761
+  jpa:
+    show-sql:  false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect        
+    open-in-view: false
+  jmx:
+    enabled: false    
+  datasource:
+    url: jdbc:oracle:thin:@192.168.93.145:1521:XE
+    username: notificacao
+    password: notificacao
+    driver-class-name: oracle.jdbc.OracleDriver
+    initialization-mode: never
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+  rabbitmq:
+    host: 192.168.93.124
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  instance:
+    hostname: localhost    
+    port: 8761
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# zuul timeout 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon: 
+  ConnectTimeout: 10000
+  ReadTimeout: 20000
+
+# swagger
+springfox:
+  documentation:
+    auto-startup: true
+    
+# rabbitmq exchanges, queues and routinkey
+sirius-notificacao:
+  rabbitmq:
+    exchange: sirius-notificacao.exchange
+    queue: sirius-notificacao.queue
+
+# configuração da rota para enviar a mensagem recebida e com erro para a fila de falha
+sirius-notificacao-falha:
+  rabbitmq:
+    exchange: sirius-notificacao-falha.exchange
+    routingkey: sirius-notificacao-falha.routingkey    
