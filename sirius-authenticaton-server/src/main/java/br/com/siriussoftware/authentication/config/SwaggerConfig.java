@@ -47,7 +47,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 	public Docket productApi() {
 		return 
 			new Docket(DocumentationType.SWAGGER_2)
-				.pathMapping(contextPath)
+				//.pathMapping(contextPath)
 				.select()
 				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any())
