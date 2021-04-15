@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.siriussoftware.library.base.service.BaseServiceImpl;
-import br.com.siriussoftware.library.base.service.BusinessException;
+import br.com.siriussoftware.library.base.service.exception.BusinessException;
 import br.com.siriussoftware.library.notification.domain.enumeration.SituacaoNotificacaoEnum;
 import br.com.siriussoftware.library.notification.domain.enumeration.TipoNotificacaoEnum;
 import br.com.siriussoftware.notification.domain.configuracao.ConfiguracaoNotificacao;

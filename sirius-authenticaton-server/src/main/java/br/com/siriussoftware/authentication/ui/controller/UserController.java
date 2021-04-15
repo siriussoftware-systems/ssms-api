@@ -1,7 +1,10 @@
 package br.com.siriussoftware.authentication.ui.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.siriussoftware.authentication.domain.User;
@@ -12,7 +15,7 @@ import io.swagger.annotations.Api;
 
 @RestController(value = "user")
 @RequestMapping("/user")
-@Api(value = "user", description = "Operações CRUD para cadastro de Usuários")
+@Api(value = "user", description = "Operações de Usuários")
 public class UserController extends CrudBaseController<UserVO, User, String> {
 
 	@Autowired
@@ -21,6 +24,12 @@ public class UserController extends CrudBaseController<UserVO, User, String> {
 	@Override
 	public UserService getService() {
 		return this.userService;
+	}
+
+	@GetMapping(value = "/search")
+	public ResponseEntity<User> findByEmail(@RequestParam String email) {
+		User obj = this.getService().findByEmail(email);
+		return ResponseEntity.ok(obj);
 	}
 
 }

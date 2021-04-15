@@ -55,6 +55,11 @@
 		</dependency>
 		<dependency>
 			<groupId>br.com.siriussoftware</groupId>
+			<artifactId>sirius-library-suporte</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>br.com.siriussoftware</groupId>
 			<artifactId>sirius-library-notification</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
@@ -92,14 +97,6 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.9.2</version>
 			<scope>compile</scope>
-		</dependency>
-
-		<!-- Dependências Spring Devtools -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 
 		<!-- Dependências testes unitários -->

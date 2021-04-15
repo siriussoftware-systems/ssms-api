@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import br.com.siriussoftware.library.base.service.BusinessException;
-import br.com.siriussoftware.library.base.service.ExclusionNotPermitedException;
+import br.com.siriussoftware.library.base.service.exception.BusinessException;
+import br.com.siriussoftware.library.base.service.exception.ExclusionNotPermitedException;
 import br.com.siriussoftware.notification.service.notificacao.NotificacaoService;
 
 @Component

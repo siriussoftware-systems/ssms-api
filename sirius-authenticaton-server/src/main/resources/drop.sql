@@ -1,12 +1,13 @@
 /* DELETAR TODAS TABELAS E SEQUENCES */
 BEGIN
-    FOR c IN (SELECT table_name FROM user_tables WHERE table_name LIKE 'TB%' OR table_name LIKE 'TJ%' OR table_name LIKE 'APEX$%' OR table_name LIKE 'DEMO%' OR table_name LIKE 'DEP%' OR table_name LIKE 'EMP%') LOOP
-        EXECUTE IMMEDIATE ('DROP TABLE ' || c.table_name || ' CASCADE CONSTRAINTS');
-    END LOOP;
-    
-    FOR s IN (SELECT sequence_name FROM user_sequences WHERE sequence_name LIKE 'SEQ_%' OR sequence_name LIKE 'SQ%' OR sequence_name LIKE 'HIBERNATE%') LOOP
-        EXECUTE IMMEDIATE ('DROP SEQUENCE ' || s.sequence_name);
-    END LOOP;
+	
+	FOR c IN (SELECT table_name FROM user_tables) LOOP
+	EXECUTE IMMEDIATE ('DROP TABLE ' || c.table_name || ' CASCADE CONSTRAINTS');
+	END LOOP;
+	
+	FOR s IN (SELECT sequence_name FROM user_sequences) LOOP
+	EXECUTE IMMEDIATE ('DROP SEQUENCE ' || s.sequence_name);
+	END LOOP;
 END;
 /
 

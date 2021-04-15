@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import br.com.siriussoftware.library.notification.ui.model.NotificacaoVO;
+import br.com.siriussoftware.library.notification.ui.model.AuditoriaVO;
 
 @Component
 public class NotificacaoProducerMessage {
@@ -23,7 +23,7 @@ public class NotificacaoProducerMessage {
 		this.rabbitTemplate = rabbitTemplate;
 	}
 
-	public void sendMessage(NotificacaoVO vo) {
+	public void sendMessage(AuditoriaVO vo) {
 		rabbitTemplate.convertAndSend(exchange, routingkey, vo);
 	}
 

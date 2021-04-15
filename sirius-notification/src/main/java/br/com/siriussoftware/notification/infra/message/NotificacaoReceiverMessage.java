@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
-import br.com.siriussoftware.library.base.service.BusinessException;
+import br.com.siriussoftware.library.base.service.exception.BusinessException;
 import br.com.siriussoftware.library.notification.ui.model.NotificacaoVO;
 import br.com.siriussoftware.notification.domain.notificacao.Notificacao;
 import br.com.siriussoftware.notification.service.notificacao.NotificacaoService;

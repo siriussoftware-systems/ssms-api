@@ -123,9 +123,9 @@
       <operations public="false" package="false" protected="false" private="false" static="false"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="br.com.siriussoftware.suporte.admin.domain.cliente.CustoDeAtendimento" 
-    project="sirius-suporte-admin" 
-    file="/sirius-suporte-admin/src/main/java/br/com/siriussoftware/suporte/admin/domain/cliente/CustoDeAtendimento.java" 
+  <class id="12" language="java" name="br.com.siriussoftware.library.suporte.ui.model.cliente.CustoDeAtendimentoVO" 
+    project="sirius-library-suporte" 
+    file="/sirius-library-suporte/src/main/java/br/com/siriussoftware/library/suporte/ui/model/cliente/CustoDeAtendimentoVO.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1783" y="127"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -179,145 +179,143 @@
     </display>  
   </class>  
   <association id="17">    
-    <bendpoint x="869" y="292"/>    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="18" name="chamado">        
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="18" name="anexos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="19" minimum="0" maximum="1">        
+      <multiplicity id="19" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <bendpoint x="2041" y="214"/>    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="21" name="custosDeAtendimento">        
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="21" name="solucoes">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="23">    
-    <bendpoint x="1682" y="270"/>    
-    <bendpoint x="1686" y="348"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="24" name="software">        
+    <bendpoint x="869" y="292"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="24" name="chamado">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="25" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="26">    
-    <bendpoint x="1858" y="308"/>    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="27" name="contrato">        
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="27" name="cliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="28" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="29">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="30" name="cliente">        
+    <bendpoint x="1682" y="270"/>    
+    <bendpoint x="1686" y="348"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="30" name="software">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="31" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="32">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="33" name="cliente">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="34" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="35">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="36" name="software">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="37" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="38">    
-    <bendpoint x="1424" y="8"/>    
-    <bendpoint x="802" y="10"/>    
-    <bendpoint x="38" y="8"/>    
-    <bendpoint x="36" y="386"/>    
-    <bendpoint x="40" y="836"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="39" name="referencia">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="40" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="42" name="software">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="43" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="44">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="45" name="atendimentos">        
+      <attribute id="33" name="atendimentos">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="46" minimum="0" maximum="2147483647">        
+      <multiplicity id="34" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="47">    
+  <association id="35">    
+    <bendpoint x="1424" y="8"/>    
+    <bendpoint x="802" y="10"/>    
+    <bendpoint x="38" y="8"/>    
+    <bendpoint x="36" y="386"/>    
+    <bendpoint x="40" y="836"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="36" name="referencia">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="48" name="software">        
+      <attribute id="39" name="tags">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="42" name="evidencias">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="45" name="software">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="48" name="atendente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="49" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="15" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="50">    
@@ -335,24 +333,25 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="53">    
-    <bendpoint x="1524" y="1160"/>    
-    <bendpoint x="800" y="1164"/>    
-    <bendpoint x="216" y="994"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="54" name="referencia">        
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="54" name="software">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="55" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="56">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="57" name="situacaoPeriodo"/>      
-      <multiplicity id="58" minimum="0" maximum="1"/>    
+      <attribute id="57" name="situacaoPeriodo">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="58" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
@@ -371,136 +370,138 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="62">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="63" name="chamado">        
+    <bendpoint x="1858" y="308"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="63" name="contrato">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="64" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="65">    
-    <bendpoint x="316" y="444"/>    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="66" name="solucao">        
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="66" name="periodoReferencia">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="67" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="68">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="69" name="cliente">        
+    <bendpoint x="1148" y="1040"/>    
+    <bendpoint x="2086" y="1038"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="69" name="contrato">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="70" minimum="0" maximum="1">        
+      <multiplicity id="70" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <bendpoint x="1118" y="722"/>    
+    <bendpoint x="1160" y="726"/>    
+    <bendpoint x="1167" y="686"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="72" name="chamadosDuplicados">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="73" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="75" name="cliente">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="76" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="71">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="72" name="periodoReferencia">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="73" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="74">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="75" name="anexos">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="76" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="77">    
-    <bendpoint x="1118" y="722"/>    
-    <bendpoint x="1160" y="726"/>    
-    <bendpoint x="1167" y="686"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="78" name="chamadosDuplicados">        
+      <attribute id="78" name="software">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="79" minimum="0" maximum="2147483647">        
+      <multiplicity id="79" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="80">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="81" name="evidencias">        
+    <bendpoint x="316" y="444"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="81" name="solucao">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="82" minimum="0" maximum="2147483647">        
+      <multiplicity id="82" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="83">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="84" name="tags">        
+    <bendpoint x="2041" y="214"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="84" name="custosDeAtendimento">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="85" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="86">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="87" name="chamado">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="88" minimum="0" maximum="2147483647">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="89">    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="90" name="solicitante">        
+      <attribute id="87" name="solicitante">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="91" minimum="0" maximum="1">        
+      <multiplicity id="88" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="89">    
+    <bendpoint x="1524" y="1160"/>    
+    <bendpoint x="800" y="1164"/>    
+    <bendpoint x="216" y="994"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="90" name="referencia">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="91" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
   <association id="92">    
-    <bendpoint x="1466" y="4"/>    
-    <bendpoint x="2276" y="10"/>    
-    <bendpoint x="2268" y="578"/>    
-    <bendpoint x="2226" y="1124"/>    
-    <bendpoint x="1052" y="1118"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
+    <end type="SOURCE" refId="4" navigable="false">      
       <attribute id="93" name="cliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
@@ -512,53 +513,56 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="95">    
+    <bendpoint x="1466" y="4"/>    
+    <bendpoint x="2276" y="10"/>    
+    <bendpoint x="2268" y="578"/>    
+    <bendpoint x="2226" y="1124"/>    
+    <bendpoint x="1052" y="1118"/>    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="96" name="chamado">        
+      <attribute id="96" name="cliente">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="97" minimum="0" maximum="2147483647">        
+      <multiplicity id="97" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="98">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="99" name="solucoes">        
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="99" name="chamado">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="100" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="101">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="102" name="atendente">        
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="102" name="chamado">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="103" minimum="0" maximum="1">        
+      <multiplicity id="103" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="104">    
-    <bendpoint x="1148" y="1040"/>    
-    <bendpoint x="2086" y="1038"/>    
-    <end type="SOURCE" refId="16" navigable="false">      
-      <attribute id="105" name="contrato">        
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="105" name="chamado">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="106" minimum="0" maximum="2147483647">        
+      <multiplicity id="106" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="14" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import br.com.siriussoftware.oauthserver.domain.User;
 
 @Component
-@FeignClient(name = "hr-user", path = "/users")
+@FeignClient(name = "sirius-authentication-server", url = "http://localhost:8000/api/authentication/user")
 public interface UserFeignClient {
 
 	@GetMapping(value = "/search")

@@ -5,11 +5,10 @@ import javax.persistence.Entity;
 import javax.validation.constraints.NotEmpty;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
-import br.com.siriussoftware.library.base.domain.DomainEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@Entity(name = DomainEntity.SUFIXO_TABELAS + "SOF")
+@Entity(name = "TBSUP_SOF")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Software extends AbstractDomainEntity {

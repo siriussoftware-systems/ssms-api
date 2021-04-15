@@ -19,7 +19,7 @@ public class RabbitMQConfig {
 
 	@Bean
 	public Exchange delcareExchange() {
-		return ExchangeBuilder.directExchange(exchange).durable(true).build();
+		return ExchangeBuilder.topicExchange(exchange).durable(true).build();
 	}
 
 	@Bean

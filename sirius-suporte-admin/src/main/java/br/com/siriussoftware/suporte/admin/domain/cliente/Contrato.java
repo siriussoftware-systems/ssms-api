@@ -17,11 +17,12 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
-import br.com.siriussoftware.library.base.domain.DomainEntity;
+import br.com.siriussoftware.library.suporte.ui.model.cliente.SituacaoContratoEnum;
+import br.com.siriussoftware.library.suporte.ui.model.cliente.TipoContratoEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@Entity(name = DomainEntity.SUFIXO_TABELAS + "CTR")
+@Entity(name = "TBSUP_CON")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Contrato extends AbstractDomainEntity {
@@ -41,8 +42,7 @@ public class Contrato extends AbstractDomainEntity {
 	@JoinColumn(name = "IDSOF", referencedColumnName = "ID")
 	private Software software;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "contrato", orphanRemoval = true, cascade = { CascadeType.REFRESH,
-			CascadeType.REMOVE })
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "contrato", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
 	private List<CustoDeAtendimento> custosDeAtendimento;
 
 	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Cliente.class)

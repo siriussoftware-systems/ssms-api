@@ -18,7 +18,7 @@ eureka:
       
 zuul:
   prefix: /api
-  ignored-services: "*"
+  #ignored-services: "*"
   
   routes:
     sirius-suporte-admin:
@@ -61,5 +61,3 @@ ribbon:
   ConnectTimeout: 10000
   ReadTimeout: 20000
   
-jwt:
-  secret: teste

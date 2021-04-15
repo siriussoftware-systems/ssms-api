@@ -33,8 +33,15 @@ security:
       client-secret: $2a$10$p9Pk0fQNAQSesI4vuvKA0OZanDD2
       resource-ids: resources
       scope: read,write
-    
 
+jwt:
+  secret: 123456
+
+oauth:
+  client:
+    name: app
+    secret: 123456
+      
 # zuul timeout 
 hystrix:
   command:
@@ -56,10 +63,3 @@ logging:
   level:
     org.springframework.security: INFO
     
-oauth:
-  client:
-    name: Service
-    secret: teste
-    
-jwt:
-  secret: teste

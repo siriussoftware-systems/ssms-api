@@ -15,7 +15,8 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.Oracle10gDialect        
+        dialect: org.hibernate.dialect.Oracle10gDialect    
+        format_sql: false    
     open-in-view: false
   jmx:
     enabled: false    
@@ -34,6 +35,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+
+logging:
+  level:
+    orghibernate.SQL: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
 
 eureka:
   instance:
@@ -69,6 +75,10 @@ sirius-notificacao:
   rabbitmq:
     exchange: sirius-notificacao.exchange
     routingkey: sirius-notificacao.routingkey    
+sirius-auditoria:
+  rabbitmq:
+    exchange: sirius-auditoria.exchange
+    routingkey: sirius-auditoria.routingkey    
 
 
 #authserver:

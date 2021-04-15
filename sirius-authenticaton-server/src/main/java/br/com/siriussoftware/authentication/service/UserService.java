@@ -18,4 +18,8 @@ public class UserService extends BaseServiceImpl<User, UserRepository, String> {
 		return this.repository;
 	}
 
+	public User findByEmail(String email) {
+		return this.getRepository().findByEmail(email);
+	}
+
 }

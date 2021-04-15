@@ -9,11 +9,10 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
-import br.com.siriussoftware.library.base.domain.DomainEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@Entity(name = DomainEntity.SUFIXO_TABELAS + "SOL")
+@Entity(name = "TBSUP_SOC")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Solicitante extends AbstractDomainEntity {

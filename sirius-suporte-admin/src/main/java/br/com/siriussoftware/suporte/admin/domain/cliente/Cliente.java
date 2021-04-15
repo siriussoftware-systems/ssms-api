@@ -10,11 +10,10 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
-import br.com.siriussoftware.library.base.domain.DomainEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-@Entity(name = DomainEntity.SUFIXO_TABELAS + "CLI")
+@Entity(name = "TBSUP_CLI")
 @Data
 @EqualsAndHashCode(callSuper = true)
 public class Cliente extends AbstractDomainEntity {
@@ -24,12 +23,10 @@ public class Cliente extends AbstractDomainEntity {
 	@NotEmpty
 	private String nome;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH,
-			CascadeType.REMOVE })
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
 	private List<Solicitante> solicitantes;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH,
-			CascadeType.REMOVE })
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
 	private List<Contrato> contrato;
 
 	// private List<SLA> slas;

@@ -12,7 +12,7 @@ import io.swagger.annotations.Api;
 
 @RestController(value = "role")
 @RequestMapping("/role")
-@Api(value = "role", description = "Operações CRUD para cadastro de Roles")
+@Api(value = "role", description = "Operações de Roles")
 public class RoleController extends CrudBaseController<RoleVO, Role, String> {
 
 	@Autowired

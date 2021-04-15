@@ -43,7 +43,7 @@
 		</dependency>		
 		
 		<!-- Dependência que fornece a implementação necessária para a aplicação funcionar como servidor de autorização Oauth2 -->
-		<dependency>
+ 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-oauth2</artifactId>
 		</dependency>
