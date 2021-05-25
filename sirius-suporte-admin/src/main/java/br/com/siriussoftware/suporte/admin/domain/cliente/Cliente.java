@@ -1,12 +1,7 @@
 package br.com.siriussoftware.suporte.admin.domain.cliente;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
@@ -22,12 +17,6 @@ public class Cliente extends AbstractDomainEntity {
 	@Column(name = "DSNOM", length = 50, insertable = true, updatable = true, nullable = false)
 	@NotEmpty
 	private String nome;
-
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
-	private List<Solicitante> solicitantes;
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
-	private List<Contrato> contrato;
 
 	// private List<SLA> slas;
 }

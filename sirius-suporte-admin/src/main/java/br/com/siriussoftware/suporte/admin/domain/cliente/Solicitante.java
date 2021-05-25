@@ -2,11 +2,7 @@ package br.com.siriussoftware.suporte.admin.domain.cliente;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
 import lombok.Data;
@@ -22,9 +18,7 @@ public class Solicitante extends AbstractDomainEntity {
 	@NotEmpty
 	private String nome;
 
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Cliente.class)
-	@JoinColumn(name = "IDCLI", referencedColumnName = "ID")
-	@NotNull
-	private Cliente cliente;
+	@Column(name = "IDCLI", length = 120, insertable = true, updatable = true, nullable = false)
+	private String cliente;
 
 }

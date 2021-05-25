@@ -1,19 +1,14 @@
 package br.com.siriussoftware.suporte.admin.domain.cliente;
 
 import java.util.Calendar;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import br.com.siriussoftware.library.base.domain.AbstractDomainEntity;
@@ -28,6 +23,10 @@ import lombok.EqualsAndHashCode;
 public class Contrato extends AbstractDomainEntity {
 	private static final long serialVersionUID = 1L;
 
+	@Column(name = "DSNOM", length = 50, insertable = true, updatable = true, nullable = false)
+	@NotEmpty
+	private String nome;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "DHINI", length = 30, nullable = false, insertable = true, updatable = false)
 	@NotNull
@@ -38,16 +37,11 @@ public class Contrato extends AbstractDomainEntity {
 	@NotNull
 	private Calendar termino;
 
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Cliente.class)
-	@JoinColumn(name = "IDSOF", referencedColumnName = "ID")
-	private Software software;
+	@Column(name = "IDSOF", length = 120, insertable = true, updatable = true, nullable = false)
+	private String software;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "contrato", orphanRemoval = true, cascade = { CascadeType.REFRESH, CascadeType.REMOVE })
-	private List<CustoDeAtendimento> custosDeAtendimento;
-
-	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Cliente.class)
-	@JoinColumn(name = "IDCLI", referencedColumnName = "ID")
-	private Cliente cliente;
+	@Column(name = "IDCLI", length = 120, insertable = true, updatable = true, nullable = false)
+	private String cliente;
 
 	@Enumerated(EnumType.STRING)
 	@Column(name = "ICTIP", length = 30, nullable = false, insertable = true, updatable = false)

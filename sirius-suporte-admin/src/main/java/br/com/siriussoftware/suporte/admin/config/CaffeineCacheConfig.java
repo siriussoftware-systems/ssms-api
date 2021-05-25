@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import com.github.benmanes.caffeine.cache.Caffeine;
 
 @Configuration
+@SuppressWarnings("rawtypes")
 public class CaffeineCacheConfig {
 
 	@Bean
@@ -23,6 +24,7 @@ public class CaffeineCacheConfig {
 				.recordStats();
 	}
 
+	@SuppressWarnings("unchecked")
 	@Bean
 	public CacheManager cacheManager(Caffeine caffeine) {
 		CaffeineCacheManager caffeineCacheManager = new CaffeineCacheManager();
